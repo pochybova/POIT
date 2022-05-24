@@ -1,0 +1,15 @@
+DROP DATABASE IF EXISTS POIT;
+
+CREATE DATABASE IF NOT EXISTS POIT;
+
+USE POIT;
+
+CREATE TABLE Meranie (
+    IDMerania INT,
+    Senzor FLOAT,
+    Vstup FLOAT,
+    Cas DATETIME
+);
+
+CREATE USER 'poit'@'localhost' IDENTIFIED BY 'poit';
+GRANT ALL PRIVILEGES ON POIT.* TO 'poit'@'localhost';
